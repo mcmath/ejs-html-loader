@@ -1,6 +1,5 @@
 'use strict';
 
-var isString = require('lodash.isstring');
 var parseQuery = require('loader-utils').parseQuery;
 var render = require('ejs').render;
 var cyan = require('chalk').cyan;

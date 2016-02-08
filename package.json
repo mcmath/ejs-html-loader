@@ -42,8 +42,7 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "ejs": "^2.0.2",
-    "loader-utils": "^0.2.0",
-    "lodash.isstring": "^4.0.0"
+    "loader-utils": "^0.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
