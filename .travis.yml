@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "stable"
+  - "5.0"
+  - "4.0"
+  - "0.12"
+  - "0.10"
+after_script:
+  - npm run coveralls
+branches:
+  only:
+    - master
