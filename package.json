@@ -23,6 +23,7 @@
   },
   "keywords": [
     "webpack",
+    "webpack-2",
     "loader",
     "webpack-loader",
     "ejs",
@@ -36,13 +37,13 @@
   },
   "homepage": "https://github.com/akim-mcmath/ejs-html-loader#readme",
   "peerDependencies": {
-    "webpack": "^1.0.0 || ^2.0.0"
+    "webpack": "1.x - 2.x"
   },
   "dependencies": {
-    "chalk": "^1.1.1",
-    "ejs": "^2.4.1",
-    "loader-utils": "^0.2.12",
-    "lodash.isstring": "^4.0.1"
+    "chalk": "^1.0.0",
+    "ejs": "^2.0.2",
+    "loader-utils": "^0.2.0",
+    "lodash.isstring": "^4.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
