@@ -80,7 +80,7 @@ Copyright &copy; 2016 Akim McMath. Licensed under the [MIT License][license].
 [dependencies-badge]: https://img.shields.io/gemnasium/akim-mcmath/ejs-html-loader.svg?style=flat-square
 
 [npm]: https://www.npmjs.com/package/ejs-html-loader
-[license]: License.txt
+[license]: LICENSE.txt
 [travis]: https://travis-ci.org/akim-mcmath/ejs-html-loader
 [coveralls]: https://coveralls.io/github/akim-mcmath/ejs-html-loader?branch=master
 [gemnasium]: https://gemnasium.com/akim-mcmath/ejs-html-loader
