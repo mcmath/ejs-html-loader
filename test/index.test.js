@@ -67,7 +67,7 @@ describe('loader:ejs-html-loader', function() {
 
 function testMatch(config, done) {
   webpack(config, function(err, stats) {
-    expect(err).to.be.null;
+    expect(err).not.to.exist;
 
     readFile(paths.RENDERED, 'utf8', function(err, content) {
       expect(err).not.to.exist;
