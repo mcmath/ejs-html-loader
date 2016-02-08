@@ -70,7 +70,7 @@ function testMatch(config, done) {
     expect(err).to.be.null;
 
     readFile(paths.RENDERED, 'utf8', function(err, content) {
-      expect(err).to.be.null;
+      expect(err).not.to.exist;
       expect(content).to.match(config.match);
 
       done();
@@ -81,7 +81,7 @@ function testMatch(config, done) {
 
 function testError(config, done) {
   webpack(config, function(err, stats) {
-    expect(err).to.be.null;
+    expect(err).not.to.exist;
     expect(stats.toString()).to.match(config.error);
     done();
   });
