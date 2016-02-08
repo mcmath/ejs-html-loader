@@ -1,0 +1,56 @@
+{
+  "name": "ejs-html-loader",
+  "version": "0.0.0",
+  "description": "Webpack loader for rendering HTML from EJS templates",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "scripts": {
+    "test": "mocha",
+    "clean": "rm -rf ./node_modules ./coverage",
+    "coverage": "istanbul cover _mocha && open ./coverage/lcov-report/index.html",
+    "coveralls": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akim-mcmath/ejs-html-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "webpack-loader",
+    "ejs",
+    "html",
+    "template"
+  ],
+  "author": "Akim McMath <akim.elijah.mcmath@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akim-mcmath/ejs-html-loader/issues"
+  },
+  "homepage": "https://github.com/akim-mcmath/ejs-html-loader#readme",
+  "peerDependencies": {
+    "webpack": "^1.0.0 || ^2.0.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "ejs": "^2.4.1",
+    "loader-utils": "^0.2.12",
+    "lodash.isstring": "^4.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.6",
+    "file-loader": "^0.8.5",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.1",
+    "webpack": "^1.12.13"
+  }
+}
