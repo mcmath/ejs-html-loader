@@ -1,6 +1,6 @@
 {
   "name": "ejs-html-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack loader for rendering HTML from EJS templates",
   "main": "index.js",
   "files": [
