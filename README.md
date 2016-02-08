@@ -47,7 +47,7 @@ module.exports = {
   ejsHtml: {
     title: 'For Whom the Bell Rings',
     baseUrl: '/',
-    delimeter: '?'
+    delimiter: '?'
   }
 };
 ```
@@ -62,7 +62,7 @@ options may be set:
 The value of `this` in your templates. If specified, its properties will be
 available in your templates, e.g. `<%= this.somePropery %>`.
 
-* **delimeter** : `string='%'`<br>
+* **delimiter** : `string='%'`<br>
 Character used inside of angle brackets marking opening/closing tags.
 Defaults to `%`, as in `<%= some.variable %>`.
 
