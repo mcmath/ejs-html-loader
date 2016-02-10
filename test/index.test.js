@@ -17,7 +17,7 @@ describe('loader:ejs-html-loader', function() {
 
   describe('usage', function() {
 
-    describe('simle usage', function() {
+    describe('simple usage', function() {
 
       it('renders template', function(done) {
         testMatch(fixtures.simple, done);
