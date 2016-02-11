@@ -1,0 +1,8 @@
+{
+  "preset": "google",
+  "disallowMultipleLineBreaks": false,
+  "excludeFiles": [
+    "coverage",
+    "node_modules"
+  ]
+}
