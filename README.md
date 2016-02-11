@@ -64,7 +64,7 @@ available in your templates, e.g. `<%= this.somePropery %>`.
 
 * **delimiter** : `string='%'`<br>
 Character used inside of angle brackets marking opening/closing tags.
-Defaults to `%`, as in `<%= some.variable %>`.
+Defaults to `'%'`, as in `<%= some.variable %>`.
 
 **Note:** The EJS `filename` option is set automatically, so you may
 include partials relative to your template files.
