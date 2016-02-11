@@ -1,6 +1,6 @@
 {
   "name": "ejs-html-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Webpack loader for rendering HTML from EJS templates",
   "main": "index.js",
   "files": [
@@ -9,10 +9,14 @@
     "LICENSE.txt"
   ],
   "scripts": {
-    "test": "mocha",
+    "test": "npm run jshint && npm run jscs && npm run mocha",
+    "jshint": "jshint . --exclude-path .gitignore",
+    "jscs": "jscs .",
+    "mocha": "istanbul cover _mocha",
     "clean": "rm -rf ./node_modules ./coverage",
-    "coverage": "istanbul cover _mocha && open ./coverage/lcov-report/index.html",
-    "coveralls": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "coverage": "npm test && open ./coverage/lcov-report/index.html",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "preversion": "npm run test"
   },
   "engines": {
     "node": ">=0.10"
@@ -49,6 +53,8 @@
     "coveralls": "^2.11.6",
     "file-loader": "^0.8.5",
     "istanbul": "^0.4.2",
+    "jscs": "^2.9.0",
+    "jshint": "^2.9.1",
     "mocha": "^2.4.5",
     "rimraf": "^2.5.1",
     "webpack": "^1.12.13"

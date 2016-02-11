@@ -17,7 +17,7 @@ module.exports = function ejsHtmlLoader(source) {
       delimiter: data.delimiter,
       context: data.context
     });
-  } catch(e) {
+  } catch (e) {
     throw new Error(renderError(e));
   }
 };
