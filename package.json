@@ -1,6 +1,6 @@
 {
   "name": "ejs-html-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Webpack loader for rendering HTML from EJS templates",
   "main": "index.js",
   "files": [
@@ -16,7 +16,7 @@
     "clean": "rm -rf ./node_modules ./coverage",
     "coverage": "npm test && open ./coverage/lcov-report/index.html",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "preversion": "npm run test:all"
+    "preversion": "npm run test"
   },
   "engines": {
     "node": ">=0.10"
