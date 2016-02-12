@@ -37,7 +37,8 @@ module.exports = {
 };
 ```
 
-Or they may be set in the `ejsHtml` property of your configuration:
+Or they may be set in the `ejsHtml` or `ejsHtmlLoader` property of your
+Webpack configuration:
 
 ```js
 // webpack.config.js
