@@ -1,3 +1,20 @@
+# v1.1.0
+
+###### February 12, 2016
+
+#### Minor Features
+
+* Allow loader options to be set with `ejsHtmlLoader` property
+
+#### Maintenance
+
+* Update [README.md][readme] to reflect above change
+
+#### Development Maintenance
+
+* Disallow multiple line breaks
+* Remove multiple line breaks from [index.js][index] and tests
+
 # v1.0.4
 
 ###### February 10, 2016
