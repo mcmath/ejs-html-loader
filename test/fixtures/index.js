@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = {
   badSyntax: require('./bad-syntax/webpack.config'),
   context: require('./context/webpack.config'),

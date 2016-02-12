@@ -2,12 +2,9 @@
 
 var paths = require('../config/paths');
 
-
-
 var ejsTest = /\.ejs$/;
 
-
-function configure(dirname, opts) {
+module.exports = function configure(dirname, opts) {
 
   var loaders = [
     {
@@ -41,7 +38,4 @@ function configure(dirname, opts) {
     ejsHtml: opts.options,
     error: opts.error
   };
-}
-
-
-module.exports = configure;
+};

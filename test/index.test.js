@@ -7,8 +7,6 @@ var fixtures = require('./fixtures');
 var paths = require('./config/paths');
 var rimraf = require('rimraf');
 
-
-
 describe('loader:ejs-html-loader', function() {
 
   afterEach('remove output directory', function(done) {
@@ -64,7 +62,6 @@ describe('loader:ejs-html-loader', function() {
 
 });
 
-
 function testMatch(config, done) {
   webpack(config, function(err, stats) {
     expect(err).not.to.exist;
@@ -77,7 +74,6 @@ function testMatch(config, done) {
     });
   });
 }
-
 
 function testError(config, done) {
   webpack(config, function(err, stats) {
