@@ -67,8 +67,15 @@ available in your templates, e.g. `<%= this.somePropery %>`.
 Character used inside of angle brackets marking opening/closing tags.
 Defaults to `'%'`, as in `<%= some.variable %>`.
 
-**Note:** The EJS `filename` option is set automatically, so you may
-include partials relative to your template files.
+## Includes
+
+The EJS `filename` option is set automatically, so you may include partials
+relative to your template files. If you want your included files to
+automatically recompile in **watch mode**, be sure to use the following syntax:
+
+```
+<% include some/file %>
+```
 
 ## License
 
