@@ -1,27 +1,42 @@
 'use strict';
 
 var parseQuery = require('loader-utils').parseQuery;
-var render = require('ejs').render;
-var cyan = require('chalk').cyan;
+var compile = require('ejs').compile;
 
-module.exports = function ejsHtmlLoader(source) {
+function ejsHtmlLoader(source) {
   var data = this.options.ejsHtml ||
     this.options.ejsHtmlLoader ||
     parseQuery(this.query);
 
   this.cacheable();
 
+  var template;
+
   try {
-    return render(source, data, {
+    template = compile(source, {
       filename: this.resourcePath,
       delimiter: data.delimiter,
       context: data.context
     });
   } catch (e) {
-    throw new Error(renderError(e));
+    throwError(e.message);
   }
-};
 
-function renderError(e) {
-  return cyan('\nejs-html-loader: ') + 'EJS render error:\n' + e.message;
+  template.dependencies.forEach(function(dep) {
+    this.addDependency(dep);
+  },this);
+
+  try {
+    return template(data);
+  } catch (e) {
+    throwError(e.message);
+  }
 }
+
+function throwError(message) {
+  var err = new Error('ejs-html-loader\n' + message);
+  Error.captureStackTrace(err, ejsHtmlLoader);
+  throw err;
+}
+
+module.exports = ejsHtmlLoader;
