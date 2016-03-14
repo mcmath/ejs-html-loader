@@ -60,6 +60,12 @@ describe('loader:ejs-html-loader', function() {
     });
   });
 
+  describe('missing local variable', function() {
+    it('emits a custom Error', function(done) {
+      testError(fixtures.badLocals, done);
+    });
+  });
+
 });
 
 function testMatch(config, done) {

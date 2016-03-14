@@ -3,7 +3,7 @@
 var configure = require('../configure.js');
 
 module.exports = configure(__dirname, {
-  error: /ejs-html-loader.+EJS render error/,
+  error: /ejs-html-loader/,
   options: {
     heading: 'Some heading'
   }

@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  badLocals: require('./bad-locals/webpack.config'),
   badSyntax: require('./bad-syntax/webpack.config'),
   context: require('./context/webpack.config'),
   delimiter: require('./delimiter/webpack.config'),
