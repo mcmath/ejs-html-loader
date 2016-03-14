@@ -44,7 +44,6 @@
     "webpack": "1.x - 2.x"
   },
   "dependencies": {
-    "chalk": "^1.0.0",
     "ejs": "^2.0.2",
     "loader-utils": "^0.2.0"
   },
