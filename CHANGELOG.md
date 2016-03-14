@@ -1,3 +1,20 @@
+# v1.2.0
+
+###### March 14, 2016
+
+#### Features
+
+* Included files are now added to the loader [dependencies][mark-dependencies],
+ensuring automatic recompilation in watch mode
+
+#### Development Features
+
+* Update tests in light of the above changes
+
+#### Maintenance
+
+* Update [README][readme] with new "Includes" section
+
 # v1.1.0
 
 ###### February 12, 2016
@@ -35,3 +52,4 @@
 [readme]: README.md
 [jscs]: http://jscs.info/
 [jshint]: http://jshint.com/about/
+[mark-dependencies]: http://webpack.github.io/docs/how-to-write-a-loader.html#mark-dependencies
