@@ -1,3 +1,16 @@
+# v1.2.1
+
+###### March 27, 2016
+
+#### Fixes
+
+* Make sure included files maintain their dependencies on error by adding
+  a caching mechanism.
+
+#### Maintenance
+
+* Divide loader into multiple files under a new `lib/` directory.
+
 # v1.2.0
 
 ###### March 14, 2016
