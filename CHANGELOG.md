@@ -1,3 +1,11 @@
+# v1.2.2
+
+###### March 27, 2016
+
+#### Fixes
+
+* Fix `Error.captureStackTrace()` to correct constructor argument.
+
 # v1.2.1
 
 ###### March 27, 2016
