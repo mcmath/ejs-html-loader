@@ -4,6 +4,7 @@
   "description": "Webpack loader for rendering HTML from EJS templates",
   "main": "index.js",
   "files": [
+    "lib",
     "index.js",
     "README.md",
     "LICENSE.txt"
