@@ -1,6 +1,5 @@
 {
   "node": true,
   "mocha": true,
-  "expr": true,
-  "-W040": false
+  "expr": true
 }
