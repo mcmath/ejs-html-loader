@@ -1,7 +1,0 @@
-{
-  "preset": "google",
-  "excludeFiles": [
-    "coverage",
-    "node_modules"
-  ]
-}

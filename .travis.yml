@@ -1,12 +1,24 @@
 language: node_js
 node_js:
-  - "stable"
-  - "5.0"
-  - "4.0"
+  - "6"
+  - "5"
+  - "4"
   - "0.12"
   - "0.10"
-after_script:
+after_success:
   - npm run coveralls
-branches:
-  only:
-    - master
+before_deploy:
+  - npm run build
+deploy:
+  provider: npm
+  email:
+    secure: E1X0Di6u1dhOXAvEsGXTTMZzz0Cx7RqNS9O4U5Tgdqlqaq9maDoHz8rZNHwqcx97m6DkgH4/go+D22DARLPr7Y+5XJNBrFcDKWPbU34lBHsTjwhxnuoKS8h7VZ/lGvQqPp1ircyYvsG5rd97J4z0hI27gF3Sj9tk8W3bn3ZTc8JxIoEw00aiEC7KNNnDpOosWkHv+SiVASo5Fk9Iwdt+k8FRtmrfmjVb/K1qp8e4lkjN8sXtxLoAYqzuOt5TUpTFDzGjlY4KS42apJxq0cKTvPXsU38Wn4QE848E4urJAIHKLR8N45wapD54FxlvS4FKjWUCpscVf8vDAGPXPbFK0uireqlI1RdHZYhEKeyR0vnIC62lQbYd9GKrh26q9TVeGniKXfIpNC/j5gp6dexYkKqNjmWE5K1CgTplgLq5ufmZArkeS+hKrSGcdGYcfib5hGM3gEfisK0Mvm0/rRposChu3UwUh9IlEblKhGbsynrs8Ee8zSerrTPnuaFuJycDO7m+SpxBe5ujf7W4/Dhh8etCsNIG0f9xxlVSfwgeeLONs1z1i94g7gGHR4n1JTW4/xLhyJuE4jsvEm23y4M1nDwEOCiPw1oJvCASXxxKN5/ydQ0wJsV6t7R0RFwDQSbOA4FYlYsWQQzmqgLJ8BES2JgAEuFhCEHpT/K4lVZl9oA=
+  api_key:
+    secure: YGkGJVV8Wx86+4fy8k88vLBku/JU7402q+fFS7VFLa1Lt017N9qsIasJgSiUWBsmRbp6L8FqT77yv7BZsyn3swdeFk/Uz8Le3lKQgANFAy7JQj/4MaceZsGxvuOU1+PHsFMqZDlIQpTzkaiPN6bVCj/nrxspPfTEiaDThsNPy/BNXjoPMnwvg8PuRgotJSHEx1vWlemnLql69RnfoWO0dqO1RY8To8wNjPJVQtMsOGgdDbg1Gi6FAdp3YltVbCIl9XSn0ibjo+sEPfHEhToPszlbyExm4GelocK3qCFowTE6YMO/PHNXq12oPI/mOB0VESyNeawnT6MYQYI+ClgWS8KXGaZVUuOJ3s9nkPODMjTBmx7TElPWBmNNtutOI12VxTmXKs+gKynJuEf7T9xIgunIuzDOFZR/OflT1qySQoVGeYBJCjYeG2IA0hIVcnVHmYBybVuw6ut5A1N5fORxVS+yToJRfR8IrU6dmuhd61nffoAPJ81TzOvcGIldKuN0g6wfc40EaJQr+QZgUvBPp72jffajP0DviQ3RBx0y3ktikqvetm0TuXc9FzLEkjBKJY4r2BKahTcqv9YyPI4Ui9vNvjaD2VG4Qa7HtsUNi342/uaVnRMf24/VI/UOkhgI8e2DDKH35RucLK0sxrEEUfTwqNM2jhBuNQHA+BDpyAg=
+  skip_cleanup: true
+  on:
+    repo: akim-mcmath/ejs-html-loader
+    node: "4"
+    tags: true
+after_deploy:
+  - npm run unbuild

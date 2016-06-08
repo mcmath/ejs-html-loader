@@ -6,43 +6,38 @@
 [![Coverage][coverage-badge]][coveralls]
 [![Dependencies][dependencies-badge]][gemnasium]
 
-A [Webpack][webpack] loader for rendering plain HTML from [EJS][ejs]
-template files.
+[Webpack][webpack] loader for rendering plain HTML from [EJS][ejs]
+template files
 
 ## Install
 
-Install via [npm][npm]:
+Install with [npm][npm]. And be sure to install [EJS][ejs] and
+[Webpack][webpack], which are peer dependencies.
 
 ```sh
-npm install --save-dev ejs-html-loader
+npm install --save-dev webpack ejs ejs-html-loader
 ```
 
 ## Usage
 
-Options and locals may be set via query string or query object:
+In your Webpack [configuration][webpack-configuration], options and locals can
+be passed to EJS in two ways. First, through a query string or query object:
 
 ```js
-// webpack.config.js
-
 module.exports = {
   // ...
   module: {
-    loaders: [
-      {
-        test: /\.ejs$/,
-        loader: 'ejs-html?title=The%20Big%20Gatsby&production'
-      }
-    ]
+    loaders: [{
+      test: /\.ejs$/,
+      loader: 'ejs-html?title=The%20Big%20Gatsby&production'
+    }]
   }
 };
 ```
 
-Or they may be set in the `ejsHtml` or `ejsHtmlLoader` property of your
-Webpack configuration:
+Or second, via an `'ejsHtml'` property:
 
 ```js
-// webpack.config.js
-
 module.exports = {
   // ...
   ejsHtml: {
@@ -88,9 +83,10 @@ Copyright &copy; 2016 Akim McMath. Licensed under the [MIT License][license].
 [dependencies-badge]: https://img.shields.io/gemnasium/akim-mcmath/ejs-html-loader.svg?style=flat-square
 
 [npm]: https://www.npmjs.com/package/ejs-html-loader
-[license]: LICENSE.txt
+[license]: LICENSE
 [travis]: https://travis-ci.org/akim-mcmath/ejs-html-loader
 [coveralls]: https://coveralls.io/github/akim-mcmath/ejs-html-loader?branch=master
 [gemnasium]: https://gemnasium.com/akim-mcmath/ejs-html-loader
 [webpack]: https://webpack.github.io/
+[webpack-configuration]: https://webpack.github.io/docs/configuration.html
 [ejs]: http://ejs.co/
