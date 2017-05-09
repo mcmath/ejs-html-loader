@@ -1,1 +1,1 @@
-require('./delimiter.ejs')
+require('./delimiter.ejs');

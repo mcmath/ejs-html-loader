@@ -1,10 +1,9 @@
-import {getLoaderConfig} from 'loader-utils';
+import {getOptions} from 'loader-utils';
 import {addDependencies, saveDependencies} from './cache';
 import {render} from './render';
 
 export default function ejsHtmlLoader(src) {
   this.cacheable();
-
   let rendered = '';
 
   try {
@@ -17,7 +16,7 @@ export default function ejsHtmlLoader(src) {
 }
 
 function renderTemplate(ctx, src) {
-  let data = getLoaderConfig(ctx, 'ejsHtml');
+  let data = getOptions(ctx);
   let {rendered, deps} = render(ctx, src, data);
 
   saveDependencies(ctx, deps);

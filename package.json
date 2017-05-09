@@ -6,22 +6,21 @@
   "scripts": {
     "build": "npm run unbuild && babel src -d lib",
     "unbuild": "rimraf lib",
-    "test:lint": "eslint lib test",
+    "test:lint": "eslint lib test && coffeelint -q test",
     "test:unit": "istanbul cover _mocha -- test/index.coffee",
     "test:report": "npm run test:unit && open coverage/lcov-report/index.html",
     "test": "npm run test:lint && npm run test:unit",
     "coveralls": "cat coverage/lcov.info | coveralls"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=4"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akim-mcmath/ejs-html-loader.git"
+    "url": "git+https://github.com/mcmath/ejs-html-loader.git"
   },
   "keywords": [
     "webpack",
-    "webpack-2",
     "loader",
     "webpack-loader",
     "ejs",
@@ -31,32 +30,33 @@
   "author": "Akim McMath <akim.elijah.mcmath@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/akim-mcmath/ejs-html-loader/issues"
+    "url": "https://github.com/mcmath/ejs-html-loader/issues"
   },
-  "homepage": "https://github.com/akim-mcmath/ejs-html-loader#readme",
+  "homepage": "https://github.com/mcmath/ejs-html-loader#readme",
   "peerDependencies": {
-    "webpack": "1.x - 2.x",
+    "webpack": "2.x",
     "ejs": "2.x"
   },
   "dependencies": {
-    "loader-utils": "^0.2.15"
+    "loader-utils": "^1.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.9.0",
+    "@mcmath/coffeelint-config": "^1.0.1",
+    "babel-cli": "^6.24.1",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-register": "^6.9.0",
-    "bluebird": "^3.4.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1",
     "chai": "^3.5.0",
-    "coffee-script": "^1.10.0",
-    "coveralls": "^2.11.9",
-    "ejs": "^2.4.2",
-    "eslint": "^2.11.1",
-    "file-loader": "^0.8.5",
-    "istanbul": "1.0.0-alpha.2",
-    "mocha": "^2.5.3",
+    "coffee-script": "^1.12.5",
+    "coffeelint": "^1.16.0",
+    "coveralls": "^2.13.1",
+    "ejs": "^2.5.6",
+    "eslint": "^3.19.0",
+    "file-loader": "^0.11.1",
+    "istanbul": "1.1.0-alpha.1",
+    "mocha": "^3.3.0",
     "relative-path-map": "^1.0.1",
-    "rimraf": "^2.5.2",
-    "webpack": "^1.12.13"
+    "rimraf": "^2.6.1",
+    "webpack": "^2.5.1"
   }
 }
