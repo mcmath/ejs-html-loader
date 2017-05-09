@@ -54,6 +54,8 @@ available in your templates, e.g. `<%= this.somePropery %>`.
 Character used inside of angle brackets marking opening/closing tags.
 Defaults to `'%'`, as in `<%= some.variable %>`.
 
+For example:
+
 ```js
 {
   // ...
