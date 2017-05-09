@@ -30,10 +30,10 @@ module.exports = {
       test: /\.ejs$/,
       loader: 'ejs-html-loader',
       options: {
-        title: "The Ant: An Introduction",
+        title: 'The Ant: An Introduction',
         season: 1,
         episode: 9,
-        production: process.env.ENV === "production"
+        production: process.env.ENV === 'production'
       }
     }]
   }
