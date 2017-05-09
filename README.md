@@ -31,11 +31,12 @@ module.exports = {
       loader: 'ejs-html-loader',
       options: {
         title: "The Ant: An Introduction",
+        season: 1,
+        episode: 9,
         production: process.env.ENV === "production"
       }
     }]
   }
-  // ...
 };
 ```
 
@@ -52,6 +53,18 @@ available in your templates, e.g. `<%= this.somePropery %>`.
 * **delimiter** : `string='%'`<br>
 Character used inside of angle brackets marking opening/closing tags.
 Defaults to `'%'`, as in `<%= some.variable %>`.
+
+```js
+{
+  // ...
+  options: {
+    delimiter: '$',
+    title: 'The Naked Ant',
+    season: 1,
+    episode: 12
+  }
+}
+```
 
 ## Includes
 
