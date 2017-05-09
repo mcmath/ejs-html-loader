@@ -1,10 +1,7 @@
 language: node_js
 node_js:
   - "6"
-  - "5"
   - "4"
-  - "0.12"
-  - "0.10"
 after_success:
   - npm run coveralls
 before_deploy:
@@ -17,8 +14,8 @@ deploy:
     secure: YGkGJVV8Wx86+4fy8k88vLBku/JU7402q+fFS7VFLa1Lt017N9qsIasJgSiUWBsmRbp6L8FqT77yv7BZsyn3swdeFk/Uz8Le3lKQgANFAy7JQj/4MaceZsGxvuOU1+PHsFMqZDlIQpTzkaiPN6bVCj/nrxspPfTEiaDThsNPy/BNXjoPMnwvg8PuRgotJSHEx1vWlemnLql69RnfoWO0dqO1RY8To8wNjPJVQtMsOGgdDbg1Gi6FAdp3YltVbCIl9XSn0ibjo+sEPfHEhToPszlbyExm4GelocK3qCFowTE6YMO/PHNXq12oPI/mOB0VESyNeawnT6MYQYI+ClgWS8KXGaZVUuOJ3s9nkPODMjTBmx7TElPWBmNNtutOI12VxTmXKs+gKynJuEf7T9xIgunIuzDOFZR/OflT1qySQoVGeYBJCjYeG2IA0hIVcnVHmYBybVuw6ut5A1N5fORxVS+yToJRfR8IrU6dmuhd61nffoAPJ81TzOvcGIldKuN0g6wfc40EaJQr+QZgUvBPp72jffajP0DviQ3RBx0y3ktikqvetm0TuXc9FzLEkjBKJY4r2BKahTcqv9YyPI4Ui9vNvjaD2VG4Qa7HtsUNi342/uaVnRMf24/VI/UOkhgI8e2DDKH35RucLK0sxrEEUfTwqNM2jhBuNQHA+BDpyAg=
   skip_cleanup: true
   on:
-    repo: akim-mcmath/ejs-html-loader
-    node: "4"
+    repo: mcmath/ejs-html-loader
+    node: "6"
     tags: true
 after_deploy:
   - npm run unbuild

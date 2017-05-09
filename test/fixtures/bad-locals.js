@@ -1,1 +1,1 @@
-require('./bad-locals.ejs')
+require('./bad-locals.ejs');

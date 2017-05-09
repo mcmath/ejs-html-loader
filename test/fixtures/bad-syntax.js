@@ -1,1 +1,1 @@
-require('./bad-syntax.ejs')
+require('./bad-syntax.ejs');

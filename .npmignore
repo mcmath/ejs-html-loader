@@ -6,3 +6,4 @@
 /.eslintrc.yml
 /.gitignore
 /.travis.yml
+/coffeelint.json
