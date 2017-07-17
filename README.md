@@ -5,12 +5,12 @@
 [![Coverage][coverage-badge]][coveralls]
 [![Dependencies][dependencies-badge]][gemnasium]
 
-[Webpack 2][webpack] loader for rendering plain HTML from [EJS][ejs]
+[Webpack][webpack] loader for rendering plain HTML from [EJS][ejs]
 template files
 
 ## Install
 
-Install with [npm][npm]. Ensure [EJS][ejs] and [Webpack 2][webpack] are installed
+Install with [npm][npm]. Ensure [EJS][ejs] and [Webpack][webpack] are installed
 as well, as these are peer dependencies.
 
 ```sh
