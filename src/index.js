@@ -1,4 +1,4 @@
-import {getOptions} from 'loader-utils';
+import {getOptions, parseQuery} from 'loader-utils';
 import {addDependencies, saveDependencies} from './cache';
 import {render} from './render';
 
@@ -16,12 +16,20 @@ export default function ejsHtmlLoader(src) {
 }
 
 function renderTemplate(ctx, src) {
-  let data = getOptions(ctx);
+  let data = getData(ctx);
   let {rendered, deps} = render(ctx, src, data);
 
   saveDependencies(ctx, deps);
 
   return rendered;
+}
+
+function getData(ctx) {
+  return Object.assign({}, getOptions(ctx), getResourceQuery(ctx));
+}
+
+function getResourceQuery(ctx) {
+  return parseQuery(ctx.resourceQuery || "?");
 }
 
 function emitError(ctx, msg) {
