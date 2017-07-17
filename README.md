@@ -40,6 +40,13 @@ module.exports = {
 };
 ```
 
+Data may also be passed through a resource query. These data take precedence
+over any options with the same name.
+
+```js
+import "./index.ejs?page=home";
+```
+
 ## Options
 
 All properties passed as loader options will be available to your

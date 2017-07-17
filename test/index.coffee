@@ -31,6 +31,15 @@ describe 'ejs-html-loader', ->
                 entry: 'simple.js'
                 query: 'heading=togo'
 
+    context 'options passed through resource query', ->
+
+        it 'renders template', ->
+            compile /abcxyz123/,
+                entry: 'resource-query.js'
+                ejsHtml:
+                    two: '987'
+                    three: '123'
+
     context 'with include statement', ->
 
         it 'includes partial', ->
