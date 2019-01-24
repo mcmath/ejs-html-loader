@@ -3,7 +3,6 @@
 [![Version][version-badge]][npm]
 [![Build][build-badge]][travis]
 [![Coverage][coverage-badge]][coveralls]
-[![Dependencies][dependencies-badge]][gemnasium]
 
 [Webpack][webpack] loader for rendering plain HTML from [EJS][ejs]
 template files
