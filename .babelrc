@@ -1,6 +1,6 @@
 {
   "presets": [
-    "es2015"
+    ["env", {"targts": {"node": "current"}}]
   ],
   "plugins": [
     "add-module-exports"
