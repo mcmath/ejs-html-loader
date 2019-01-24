@@ -86,7 +86,7 @@ automatically recompile in watch mode, be sure to use the following syntax:
 
 ## License
 
-Copyright &copy; 2016&ndash;2017 Akim McMath. Licensed under the [MIT License][license].
+Copyright &copy; 2016&ndash;2019 Akim McMath. Licensed under the [MIT License][license].
 
 [version-badge]: https://img.shields.io/npm/v/ejs-html-loader.svg?style=flat-square
 [build-badge]: https://img.shields.io/travis/mcmath/ejs-html-loader/master.svg?style=flat-square
